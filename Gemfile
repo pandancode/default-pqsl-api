@@ -20,6 +20,8 @@ gem 'devise'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'pundit', '~> 2.2'
 
+gem 'devise-jwt'
+gem 'rack-cors'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
