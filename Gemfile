@@ -16,6 +16,11 @@ gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'devise'
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+gem 'pundit', '~> 2.2'
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
