@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
         # ! You can have them below
         #  :recoverable, :rememberable, :validatable
-        :jwt_authenticable,
-        jwt_recovation_strategy: JwtDenylist
-
+        :jwt_authenticatable,
+        jwt_revocation_strategy: JwtDenylist
 end
