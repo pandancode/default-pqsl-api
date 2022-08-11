@@ -2,11 +2,16 @@ class MembersController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    p "Begin members_controller#show"
+    p "Show current user"
+    p current_user
+    p "Set user"
     user = get_user_from_token
     render json: {
-      message: "If you see this, you're in!",
+      message: "If you see this, you're in members_controller#show!",
       user: user
     }
+    p "Hello from members_controller#show"
   end
 
   private
