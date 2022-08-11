@@ -11,6 +11,9 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def respond_to_on_destroy
+    p "Hitting logout action"
+    p current_user
+    p "current_user identified?"
     log_out_success && return if current_user
 
     log_out_failure
