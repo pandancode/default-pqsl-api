@@ -12,12 +12,12 @@ class MembersController < ApplicationController
   private
 
   def get_user_from_token
-    puts "Hello from get_user_from_token START"
+    # puts "Hello from get_user_from_token START"
     jwt_payload = JWT.decode(request.headers['Authorization'].split(' ')[1],
                             ENV['DEVISE_JWT_SECRET_KEY']).first
-    puts "Hello from get_user_from_token before sub"
+    # puts "Hello from get_user_from_token before sub"
     user_id = jwt_payload['sub']
-    puts user_id
+    # puts user_id
     User.find(user_id.to_s)
   end
 end
