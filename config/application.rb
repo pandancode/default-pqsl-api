@@ -25,12 +25,13 @@ module DefaultPqslApi
     config.load_defaults 7.0
 
     # This also configures session_options for use below
-    config.session_store :cookie_store, key: '_interslice_session'
+    config.session_store :cookie_store, key: ENV['COOKIE_SECRET_KEY']
 
     # Required for all session management (regardless of session_store)
     # config.middleware.use ActionDispatch::Cookies
 
-    config.middleware.use config.session_store, config.session_options
+    config.middleware.use config.session_store, expire_after: 2.days
+    # config.middleware.use config.session_store, config.session_options
 
     # Configuration for the application, engines, and railties goes here.
     #
