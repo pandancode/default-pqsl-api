@@ -27,6 +27,12 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # ! @Yilun added this as per
+  # ! https://docs.w3cub.com/rails~7.0/guides/api_app
+  # ! However, this may only be interesting if we don't want the default :api setting
+  # config.debug_exception_response_format = :api
+  # config.debug_exception_response_format = :default
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
