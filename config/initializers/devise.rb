@@ -18,6 +18,9 @@ Devise.setup do |config|
 
   config.jwt do |jwt|
     jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+    # ! From here
+    # ! https://github.com/waiting-for-dev/devise-jwt
+    # jwt.secret = Rails.application.credentials.devise_jwt_secret_key!
   end
 
   # ==> Controller configuration
